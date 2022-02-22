@@ -1,0 +1,23 @@
+{
+  "name": "ranch-scraper",
+  "version": "1.0.0",
+  "description": "CRHS Scraper (2019-present)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michatran4/ranch-scraper.git"
+  },
+  "author": "michatran4",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michatran4/ranch-scraper/issues"
+  },
+  "homepage": "https://github.com/michatran4/ranch-scraper#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "puppeteer": "^13.3.2"
+  }
+}

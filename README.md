@@ -10,6 +10,7 @@ access CFISD's Schoology.
 ## Dependencies
 - dotenv for providing the username and password.
 - puppeteer for scraping.
+- cheerio/unirest for scraping the faculty web pages.
 
 ## Setup
 In `.env`, put your username and password in like the following format:
@@ -32,3 +33,21 @@ scrape further.
 While indexing id numbers, pages may get stuck. Checks are in place for you to
 just click the Previous button. The scraping for the ids should be relatively
 quick, so just be attentive until the ids are done.
+
+Scraping the faculty web pages can be done separately with `teachers.js`.
+
+One should determine what clubs should be excluded from the club count, and write it in 
+`fake-clubs.json` as a JSON array.
+
+## Analysis with Java
+- [org.json](https://github.com/stleary/JSON-java) is used to parse JSON.
+The following info can be found:
+- the graduation years of each member (though this might not be perfect with some lacking the group)
+- who belongs to each graduating class, how many are in each class (inaccurate, people can join other classes)
+- who is in the most clubs (excluding announcements and such)
+- who is in the most clubs per graduating class
+- who is in which clubs, which clubs have the most people
+
+A few students and teachers have private settings on. Therefore, their groups can't be scraped.
+However, normal students don't have the ability to set group privacy settings.
+This should make group data fairly accurate.

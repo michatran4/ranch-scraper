@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/michatran4/ranch-scraper#readme",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
     "dotenv": "^16.0.0",
-    "puppeteer": "^13.3.2"
+    "puppeteer": "^13.3.2",
+    "unirest": "^0.6.0"
   }
 }
